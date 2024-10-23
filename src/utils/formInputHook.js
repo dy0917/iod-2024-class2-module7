@@ -9,6 +9,10 @@ export function useFormInput(initialValue) {
     setValue(e.target.value);
   }
 
+  function init(value) {
+    setValue(value);
+  }
+
   // generic function to reset input value
   const reset = () => setValue("");
 
@@ -17,6 +21,7 @@ export function useFormInput(initialValue) {
   const inputProps = {
     value,
     handleChange,
+    init,
   };
 
   // returns data to be used by a component

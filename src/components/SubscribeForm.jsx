@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useFormInput } from "../utils/formInputHook";
 import { useUserContext } from "../context/userContext";
 
@@ -11,11 +11,14 @@ export default function SubscribeForm() {
 
   //   const [firstName, setFirstName] = useState("Mary");
   //   const [email, setEmail] = useState("mary@poppins.com");
-  const [firsttNameniputProps, firstNameReset] = useFormInput(
-    currentUser ? currentUser.firstName : undefined
-  );
+  const [firsttNameniputProps, firstNameReset] = useFormInput("");
+
   const [emailInputProps, reset] = useFormInput("mary@poppins.com");
   // similar handler functions
+
+  useEffect(() => {
+    firsttNameniputProps.init(currentUser.firstName);
+  }, [currentUser]);
 
   function handleSubscribe() {
     firstNameReset();
