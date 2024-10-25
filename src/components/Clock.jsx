@@ -8,6 +8,7 @@ const Clock = () => {
     // first arg is usually an arrow function
     const interval = setInterval(() => tick(), 1000);
     console.log("Clock component mounted");
+    //triggered when component is removed 
     return () => {
       clearInterval(interval);
       console.log("unmounted");

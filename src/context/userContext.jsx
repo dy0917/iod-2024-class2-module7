@@ -6,12 +6,9 @@ const UserContext = React.createContext();
 // Use it in App.jsx like <UserProvider>...</UserProvider>
 export const UserProvider = (props) => {
   // store the current user in state at the top level
-  const [currentUser, setCurrentUser] = useState({});
-  const { url } = useServerContext();
-  console.log("url", url);
+  const [currentUser, setCurrentUser] = useState({ email: "adfjkasdf@a.com" });
   // sets user object in state, shared via context
   const handleUpdateUser = (user) => {
-    console.log("url", url);
     setCurrentUser(user);
   };
   const tempValue = "this is a value";

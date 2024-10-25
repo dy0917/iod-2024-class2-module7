@@ -3,7 +3,7 @@ import { useData } from "../utils/useData";
 import { useUserContext } from "../context/userContext";
 export default function ActivityFinder() {
   // Fetches a random activity
-  const [participants, setParticipants] = useState("asdfjk;asdf");
+  const [participants, setParticipants] = useState("1");
   // const [activity, setActivity] = useState("");
   const { tempValue } = useUserContext();
   const data = useData("https://dummyjson.com/products/" + participants);

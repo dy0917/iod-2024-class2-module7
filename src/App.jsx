@@ -26,15 +26,15 @@ function App() {
       className="ClockDisplay componentBox"
       style={{ background: theme.background, color: theme.foreground }}
     >
-      {currentUser.firstName}
-      {/* {showClock && <Clock />}
-      <button onClick={toggleClock}>Toggle Clock</button> */}
+      {/* {currentUser.firstName} */}
+      {showClock && <Clock />}
+      <button onClick={toggleClock}>Toggle Clock</button>
       <ActivityFinder />
       {/* <VideoPlayer></VideoPlayer> */}
       {/* <ReducerCounter></ReducerCounter> */}
       {/* <PostListReducer/> */}
-      <SubscribeForm></SubscribeForm>
-      <button onClick={setUser}>Login</button>
+      {/* <SubscribeForm></SubscribeForm> */}
+      {/* <button onClick={setUser}>Login</button> */}
     </div>
   );
 }
